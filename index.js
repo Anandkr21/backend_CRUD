@@ -16,9 +16,11 @@ app.get('/', (req,res)=>{
     res.send('welcome')
 })
 
+
 app.use('/users', userRouter)
 app.use(authenticate)
 app.use('/students', dataRouter)
+
 
 app.listen(process.env.port, async() =>{
     try {
